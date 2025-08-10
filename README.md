@@ -1,11 +1,12 @@
-# Task 1. HTML. The Foundations of Web Design
+# Task 2. CSS and Preprocessors
 
-- This is the first task for the DataArt JS School. 
+- This is the secibd task for the DataArt JS School. 
 
-- It contains the HTML structure of a timeline based webpage.
+- It contains the HTML structure and styles using CSS of a timeline based webpage.
 
 ## Details
 
 - The structure is made using Semantic HTML for better accessibility.
-- It should contain everything needed for the HTML part of our project.
-- There could be future changes made as the project requires for CSS and JavaScript. 
+- We've added placeholder HTML for the timeline to style for with the CSS.
+- This project should contain all the required HTML and CSS necessary.
+- There could be future changes made as the project requires for JavaScript. 
