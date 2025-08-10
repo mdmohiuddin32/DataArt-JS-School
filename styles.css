@@ -113,7 +113,8 @@ figure {
 
 
 figure img {
-    max-width: 120px;
+    width: 100%;
+    max-width: 280px;
     height: auto;
 }
 
@@ -173,5 +174,9 @@ article button {
     article {
         text-align: center;
         max-width: 320px;
+    }
+
+    figure img {
+        max-width: 220px;
     }
 }
