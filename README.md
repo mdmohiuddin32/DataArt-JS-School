@@ -12,6 +12,7 @@
 - Clone the repository (git clone https://github.com/mdmohiuddin32/DataArt-JS-School/tree/task-5).
 - Then run the following commands in your terminal:
 ```console
+  cd task-5 (change to the project's directory)
   npm install
   npm run dev
 ```
