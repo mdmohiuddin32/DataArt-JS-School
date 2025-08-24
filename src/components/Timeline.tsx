@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Timeline: React.FC<Props> = ({ events, active, onSelect }) => (
-  <ul className="timeline-list">
+  <ul role="tablist" className="timeline-list">
     {events.map((ev, i) => (
       <li key={ev.year} className="timeline-item">
         <div
@@ -20,5 +20,6 @@ const Timeline: React.FC<Props> = ({ events, active, onSelect }) => (
     ))}
   </ul>
 );
+
 
 export default Timeline;
