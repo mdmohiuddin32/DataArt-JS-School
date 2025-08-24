@@ -1,11 +1,15 @@
-# Task 5. React. Building Dynamic User Interfaces
+# Task 6. Web Accessibility – Designing for Everyone
 
-- This is the fifth task for the DataArt JS School. 
+## Note: This is the finished app.
+
+- This is the sixth and final task for the DataArt JS School. 
 
 - It contains the HTML, CSS, TypeScript with React.js of a timeline based webpage.
 
 - Here we use TypeScript with React and bootstrap with Vite.
 
+- We've also created an accessibility.md guide to make the app more accessible for users.
+  
 ## How to Use
 
 - This is bootstrapped using Vite (React + TypeScript template). 
