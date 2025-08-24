@@ -9,10 +9,10 @@
 ## How to Use
 
 - This is bootstrapped using Vite (React + TypeScript template). 
-- Clone the repository (git clone https://github.com/mdmohiuddin32/DataArt-JS-School/tree/task-5).
+- Clone the repository (git clone -b task-5 https://github.com/mdmohiuddin32/DataArt-JS-School.git).
 - Then run the following commands in your terminal:
 ```console
-  cd task-5 (change to the project's directory)
+  cd "DataArt-JS-School" (change to the project's directory)
   npm install
   npm run dev
 ```
