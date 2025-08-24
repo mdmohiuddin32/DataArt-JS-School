@@ -12,8 +12,8 @@ export default function EventModal({ event, open, onClose }: Props){
 
   return createPortal(
     <div className="overlay" onClick={onClose}>
-      <div className="modal-content" onClick={e => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose}>&times;</button>
+      <div role="dialog" className="modal-content" onClick={e => e.stopPropagation()}>
+        <button aria-label="Close modal" className="close-btn" onClick={onClose}>&times;</button>
         <h2>{event.year}</h2>
         <h1>{event.title}</h1>
         <figure>
@@ -26,3 +26,4 @@ export default function EventModal({ event, open, onClose }: Props){
     document.getElementById('modal')!   // empty container until portal mounts
   );
 }
+
