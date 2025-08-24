@@ -7,7 +7,9 @@ const App: React.FC = () => {
   const { events, loading, error } = useEvents();
   const [active, setActive] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
+  const [lastFocused, setLastFocused] = useState(null);
 
+  
   if (loading) return <p>Loading…</p>;
   if (error)   return <p>Error: {error}</p>;
   if (!events.length) return <p>No events</p>;
@@ -26,12 +28,20 @@ const App: React.FC = () => {
           <figcaption>{evt.title}</figcaption>
         </figure>
         <p>{evt.description}</p>
-        <button onClick={() => setModalOpen(true)}>Learn More</button>
+        <button onClick={() => {
+            setLastFocused(document.activeElement);
+            setModalOpen(true);
+              }}>Learn More
+        </button>
       </article>
 
-      <EventModal event={evt} open={modalOpen} onClose={() => setModalOpen(false)} />
+      <EventModal event={evt} open={modalOpen} onClose={() => {
+          setModalOpen(false);
+          if (lastFocused) lastFocused.focus();}}
+        />
     </>
   );
 };
 
 export default App;
+
