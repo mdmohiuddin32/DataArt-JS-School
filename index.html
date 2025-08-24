@@ -1,45 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 1</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline</title>
+  <link rel="stylesheet" href="/src/styles.css" />
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="logo" />
-        <button>Theme Toggle</button>
-    </header>
+  <header>
+    <img src="/logo.png" alt="logo" />
+  </header>
 
-    <nav>
-        <!-- empty for now -->
-    </nav>
+  <main>
+    <!-- React mounts into this section -->
+    <section id="timeline"></section>
 
-    <main>
-        <section id="timeline">
+    <!-- React portals its modal into this div -->
+    <div id="modal"></div>
 
-        </section>
-
-        <article>
-            <h2>1977</h2>
-            <h1>Introduction of the First Personal Computer</h1>
-            
-            <figure>
-                <img src="computer.png" alt="first-personal-computer" />
-                <figcaption>The First Personal Computer</figcaption>
-            </figure>
-
-            <p>The first personal computer, introduced in 1977, revolutionized the way people interacted with</p>
-            <p>These early systems were more affordable and paving the way for the digital age and transforming various</p>
-
-            <button>Learn More</button>
-        </article>
-
-        <div id="modal">
-            <!-- empty for now -->
-        </div>
-
-    </main>
+    <script type="module" src="/src/main.tsx"></script>
+  </main>
 </body>
-
 </html>
