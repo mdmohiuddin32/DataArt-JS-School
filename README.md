@@ -16,7 +16,7 @@
 - Clone the repository (git clone -b task-6 https://github.com/mdmohiuddin32/DataArt-JS-School.git).
 - Then run the following commands in your terminal:
 ```console
-  cd "DataArt-JS School" (change to the project's directory)
+  cd "DataArt-JS-School" (change to the project's directory)
   npm install
   npm run dev
 ```
