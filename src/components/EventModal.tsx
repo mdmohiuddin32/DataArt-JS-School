@@ -9,9 +9,15 @@ interface Props{
 
 export default function EventModal({ event, open, onClose }: Props){
   if (!open || !event) return null;      // nothing rendered → no backdrop
-
+  
+  function handleKeyDown(e) {
+    if (e.key === 'Escape') {
+      onClose();
+    }
+  }
+  
   return createPortal(
-    <div className="overlay" onClick={onClose}>
+    <div className="overlay" onClick={onClose} onKeyDown={handleKeyDown} >
       <div role="dialog" className="modal-content" onClick={e => e.stopPropagation()}>
         <button aria-label="Close modal" className="close-btn" onClick={onClose}>&times;</button>
         <h2>{event.year}</h2>
@@ -26,4 +32,5 @@ export default function EventModal({ event, open, onClose }: Props){
     document.getElementById('modal')!   // empty container until portal mounts
   );
 }
+
 
