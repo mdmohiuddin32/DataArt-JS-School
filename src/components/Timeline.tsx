@@ -7,8 +7,7 @@ interface Props {
   onSelect: (index: number) => void;
 }
 
-const Timeline: React.FC<Props> = ({ events, active, onSelect }) => (
-  
+const Timeline: React.FC<Props> = ({ events, active, onSelect }) => {
   function handleKeyDown(e, index) {
     if (e.key === 'ArrowLeft') {
       onSelect(index - 1);
@@ -17,9 +16,9 @@ const Timeline: React.FC<Props> = ({ events, active, onSelect }) => (
       onSelect(index + 1);
     }
   }
-
   
-  <ul role="tablist" className="timeline-list">
+  return (
+    <ul role="tablist" className="timeline-list">
       {events.map((ev, i) => (
         <li key={ev.year} className="timeline-item">
           <div
@@ -27,13 +26,16 @@ const Timeline: React.FC<Props> = ({ events, active, onSelect }) => (
             onClick={() => onSelect(i)}
             onKeyDown={(e) => handleKeyDown(e, i)}
             tabIndex={0}
+            aria-current={i === active ? 'step' : undefined}
           />
-        <span>{ev.year}</span>
-      </li>
-    ))}
-  </ul>
-);
+          <span>{ev.year}</span>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 
 export default Timeline;
+
 
